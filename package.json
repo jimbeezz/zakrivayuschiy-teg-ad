@@ -1,0 +1,30 @@
+{
+  "name": "zakrivayuschiy-teg-ad",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jimbeezz/zakrivayuschiy-teg-ad#readme",
+  "bugs": {
+    "url": "https://github.com/jimbeezz/zakrivayuschiy-teg-ad/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimbeezz/zakrivayuschiy-teg-ad.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'hello world!'",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint '**/*.css'",
+    "lintfix": "stylelint '**/*.css' --fix",
+    "check-all": "npm run check  && npm run lint",
+    "fix-all": "npm run format && npm run lintfix"
+  },
+  "dependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.26.0"
+  }
+}

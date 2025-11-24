@@ -11,6 +11,70 @@
 */
 
 .page {
+  font-family: 'Inter', Roboto;
+  font-weight: 400;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--background);
+}
+
+.header{
+  display: flex;
+  height:clamp(527px, 71vh, 568px);
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'PressStart2P', monospace;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: var(--h1-size);
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  align-self: center;
+  justify-self: center;
+}
+
+.some-P2-font{
+  font-family: 'PressStart2P', monospace;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: var(--h2-size);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.header-txt-bckgr{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  width: clamp(375px, 50% , 700px);
+  height: clamp(327px, 71%, 368px);
+  border: 2px solid black;
+  margin: 100px 0;
+  flex-direction: column;
+}
+
+.header-txt-bckgr .some-P2-font{
+  margin: 20px auto 0px auto;
+}
+
+main{
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+section h3{
+font-family: 'Inter', Roboto;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
 }
