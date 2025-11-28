@@ -157,6 +157,7 @@ div p:first-child{
 }
 
 .card__like-button {
+  position: relative;
   font-family: 'PressStart2P', monospace;
   font-weight: 400;
   font-style: Regular;
@@ -168,15 +169,95 @@ div p:first-child{
   inline-size: 130px;
   block-size: 38px;
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.sparks {
+  fill-opacity: 0;
 }
 
 .card__like-button_add{
+  position: relative;
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .card__icon-button{
   border: none;
   background-color: transparent;
+  transition: outline 0.3s ease;
+}
+
+.card__icon-button:focus{
+  outline: none;
+}
+
+.card__icon-button:focus-visible{
+  outline: 2px solid black;
+}
+
+.like-icon .core {
+  fill: white;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core{
+  fill: black;
+  transition: fill 0.3s linear ;
+}
+
+.like-icon:active .core{
+  fill: red;
+  transition: fill 0.3s linear ;
+}
+
+.like-icon .main-body {
+  fill: white;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body{
+  fill: black;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .main-body{
+  fill: red;
+  transition: fill 0.3s  0.05s linear;
+}
+
+.like-icon.is-liked .contour,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .core {
+  fill: red;
+}
+
+
+.like-icon.is-liked .sparks {
+  animation: spark-trans 0.3s 0.3s ease-in;
+}
+
+.like-icon.is-liked .heart{
+  animation: scale-me 0.3s 0.1s ease-in;
+  transform-origin: center;
+}
+
+@keyframes scale-me{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.25);
+  }
+}
+
+@keyframes spark-trans{
+  from{
+    fill-opacity: 0;
+  }
+  to{
+    fill-opacity: 1;
+  }
 }
 
 .footer-text {
@@ -202,6 +283,8 @@ footer{
   flex-direction: column;
   border: 2px solid black;
   margin: 51px 0 101px;
+  position: relative;
+  overflow: hidden;
 }
 
 dialog[open] {
@@ -281,11 +364,35 @@ dialog[open] .ok-button {
 
 
 
-.card__like-button:focus, .card__like-button_add:focus {
+.card__like-button:focus,
+.card__like-button_add:focus {
   outline: none;
   box-shadow: 2px 2px #000;
 }
 
-.card__like-button:hover, .card__like-button_add:hover{
-  
+.card__like-button::before,
+.card__like-button_add::before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
+
+.card__like-button:hover::before,
+.card__like-button_add:hover::before{
+  transform: scaleX(1);
+}
+
+.button__text{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
