@@ -11,22 +11,22 @@
 */
 
 .page {
-  font-family: 'Inter', Roboto;
+  font-family: "Inter", Roboto;
   font-weight: 400;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background);
 }
 
-.header{
+.header {
   display: flex;
-  height:clamp(527px, 71vh, 568px);
+  height: clamp(527px, 71vh, 568px);
   align-items: center;
   justify-content: center;
 }
 
 h1 {
-  font-family: 'PressStart2P', monospace;
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: var(--h1-size);
@@ -38,8 +38,8 @@ h1 {
   justify-self: center;
 }
 
-.some-P2-font{
-  font-family: 'PressStart2P', monospace;
+.some-P2-font {
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: var(--h2-size);
@@ -48,7 +48,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.header-txt-bckgr{
+.header-txt-bckgr {
   display: flex;
   align-items: center;
   background-color: white;
@@ -60,19 +60,19 @@ h1 {
   flex-direction: column;
 }
 
-.header-txt-bckgr .some-P2-font{
+.header-txt-bckgr .some-P2-font {
   margin: 20px auto 0px auto;
 }
 
-main{
+main {
   display: flex;
   gap: 50px;
   align-items: center;
   flex-direction: column;
 }
 
-section h3{
-  font-family: 'Inter', Roboto;
+section h3 {
+  font-family: "Inter", Roboto;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -86,7 +86,7 @@ p {
   letter-spacing: 0%;
 }
 
-figcaption{
+figcaption {
   font-family: Press Start 2P;
   font-weight: 400;
   font-style: Regular;
@@ -96,16 +96,16 @@ figcaption{
   text-transform: uppercase;
 }
 
-section{
+section {
   display: flex;
   flex-direction: column;
   height: min-content;
   width: var(--main-block-wdth);
   border: 2px solid black;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.image-container{
+.image-container {
   margin: 0;
   padding: 0;
   position: relative;
@@ -115,18 +115,18 @@ section{
   overflow: hidden;
 }
 
-.car{
-  width: 100%;       
-  height: 100%;     
-  object-fit: cover; 
+.car {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: calc(100% + 4px) center;
 }
 
 .watermark {
   position: absolute;
   top: 25px;
-  right:13px;
-  font-family: 'PressStart2P', monospace;
+  right: 13px;
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: 14px;
@@ -134,19 +134,26 @@ section{
   letter-spacing: 0%;
   text-transform: uppercase;
   opacity: 50%;
-    text-shadow: 
-    -1px -1px 0 #FFF,
-     1px -1px 0 #FFF,
-    -1px  1px 0 #FFF,
-     1px  1px 0 #FFF;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
-div p:first-child{
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+div p:first-child {
   margin-bottom: 27px;
   margin-right: 28.95px;
 }
 
-.content-paragraphs{
+.content-paragraphs {
   margin: 25px;
 }
 
@@ -158,7 +165,7 @@ div p:first-child{
 
 .card__like-button {
   position: relative;
-  font-family: 'PressStart2P', monospace;
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: 14px;
@@ -176,23 +183,23 @@ div p:first-child{
   fill-opacity: 0;
 }
 
-.card__like-button_add{
+.card__like-button_add {
   position: relative;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-.card__icon-button{
+.card__icon-button {
   border: none;
   background-color: transparent;
   transition: outline 0.3s ease;
 }
 
-.card__icon-button:focus{
+.card__icon-button:focus {
   outline: none;
 }
 
-.card__icon-button:focus-visible{
+.card__icon-button:focus-visible {
   outline: 2px solid black;
 }
 
@@ -201,14 +208,14 @@ div p:first-child{
   transition: fill 0.3s 0.03s linear;
 }
 
-.like-icon:hover .core{
+.like-icon:hover .core {
   fill: black;
-  transition: fill 0.3s linear ;
+  transition: fill 0.3s linear;
 }
 
-.like-icon:active .core{
+.like-icon:active .core {
   fill: red;
-  transition: fill 0.3s linear ;
+  transition: fill 0.3s linear;
 }
 
 .like-icon .main-body {
@@ -216,14 +223,14 @@ div p:first-child{
   transition: fill 0.3s linear;
 }
 
-.like-icon:hover .main-body{
+.like-icon:hover .main-body {
   fill: black;
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon:active .main-body{
+.like-icon:active .main-body {
   fill: red;
-  transition: fill 0.3s  0.05s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour,
@@ -232,36 +239,35 @@ div p:first-child{
   fill: red;
 }
 
-
 .like-icon.is-liked .sparks {
   animation: spark-trans 0.3s 0.3s ease-in;
 }
 
-.like-icon.is-liked .heart{
+.like-icon.is-liked .heart {
   animation: scale-me 0.3s 0.1s ease-in;
   transform-origin: center;
 }
 
-@keyframes scale-me{
-  from{
+@keyframes scale-me {
+  from {
     transform: scale(1);
   }
-  to{
+  to {
     transform: scale(1.25);
   }
 }
 
-@keyframes spark-trans{
-  from{
+@keyframes spark-trans {
+  from {
     fill-opacity: 0;
   }
-  to{
+  to {
     fill-opacity: 1;
   }
 }
 
 .footer-text {
-  font-family: 'PressStart2P', monospace;
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: 14px;
@@ -270,12 +276,12 @@ div p:first-child{
   vertical-align: middle;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
 }
 
-.footer_button{
+.footer_button {
   display: flex;
   align-items: center;
   padding: 15px 20.5px 15px 19.5px;
@@ -290,8 +296,8 @@ footer{
 dialog[open] {
   padding: 30px 42px;
   position: fixed;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(345px, 40%, 357px);
   height: 191px;
@@ -299,11 +305,12 @@ dialog[open] {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0 , 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
-dialog[open] .dialog-text,dialog[open] .ok-button span {
-  font-family: 'PressStart2P', monospace;
+dialog[open] .dialog-text,
+dialog[open] .ok-button span {
+  font-family: "PressStart2P", monospace;
   font-weight: 400;
   font-style: Regular;
   font-size: 14px;
@@ -312,18 +319,18 @@ dialog[open] .dialog-text,dialog[open] .ok-button span {
   text-transform: uppercase;
 }
 
-dialog[open] .ok-button span{
+dialog[open] .ok-button span {
   line-height: 90%;
 }
 
-dialog[open] div{
+dialog[open] div {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 30px;
 }
 
-dialog[open] div svg{
+dialog[open] div svg {
   flex-shrink: 0;
   align-self: center;
 }
@@ -362,8 +369,6 @@ dialog[open] .ok-button {
   filter: hue-rotate(90deg) opacity(0.7) blur(2px);
 }
 
-
-
 .card__like-button:focus,
 .card__like-button_add:focus {
   outline: none;
@@ -372,11 +377,11 @@ dialog[open] .ok-button {
 
 .card__like-button::before,
 .card__like-button_add::before {
-  content:'';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   left: 0;
   background-color: black;
   transform: scaleX(0);
@@ -385,14 +390,13 @@ dialog[open] .ok-button {
 }
 
 .card__like-button:hover::before,
-.card__like-button_add:hover::before{
+.card__like-button_add:hover::before {
   transform: scaleX(1);
 }
 
-.button__text{
+.button__text {
   position: relative;
   z-index: 2;
   color: #fff;
   mix-blend-mode: difference;
 }
-
