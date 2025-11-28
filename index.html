@@ -518,7 +518,7 @@
       <button
         class="footer_button card__like-button_add"
         type="button"
-        onclick="window['dialog-id'].show()"
+        onclick="document.getElementById('dialog-id').showModal()"
         aria-controls="dialog-id"
       >
         <svg width="28" height="28" viewBox="0 0 28 28" class="footer-svg">
@@ -526,7 +526,9 @@
         </svg>
         <span class="footer-text button__text">Сохранить на память</span>
       </button>
-      <dialog id="dialog-id">
+      
+    </footer>
+    <dialog id="dialog-id">
         <div>
           <svg width="39" height="39" viewBox="0 0 39 39">
             <use href="#icon-save"></use>
@@ -536,12 +538,11 @@
         <button
           class="ok-button card__like-button_add"
           type="button"
-          onclick="window['dialog-id'].close()"
+          onclick="document.getElementById('dialog-id').close()"
         >
           <span class="button__text">ok</span>
         </button>
-      </dialog>
-    </footer>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

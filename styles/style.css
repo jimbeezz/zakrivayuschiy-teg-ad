@@ -12,7 +12,7 @@
 
 .page {
   font-family: "Inter", Roboto;
-  font-weight: 400;
+  font-variation-settings: 'wght' 400;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background);
@@ -73,8 +73,8 @@ main {
 
 section h3 {
   font-family: "Inter", Roboto;
-  font-weight: 700;
-  font-size: 18px;
+  font-variation-settings: 'wght' 700,'opsz' 18;
+  /* font-size: 18px; */
   line-height: 100%;
   letter-spacing: 0;
   padding: 4px 10px 6px;
@@ -294,6 +294,7 @@ footer {
 }
 
 dialog[open] {
+  z-index: 9999;
   padding: 30px 42px;
   position: fixed;
   top: 50%;
@@ -302,6 +303,7 @@ dialog[open] {
   width: clamp(345px, 40%, 357px);
   height: 191px;
   margin: 0;
+  overflow: hidden;
 }
 
 dialog::backdrop {
