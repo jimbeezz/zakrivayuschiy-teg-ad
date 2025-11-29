@@ -9,19 +9,10 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src:
-    local("Inter Variable"),
-    local("Inter-Variable"),
-    url("./Inter-Variable.woff2")
-      format("woff2-variations"),
-    url("./Inter-Variable.woff2")
-      format("woff2"),
-    url("./Inter-Variable.woff2")
-      format("supports variations");
-  font-display: swap;
+  font-family: 'Inter';
+  src: local("Inter"),
+  url('./Inter-Variable.woff2') format('woff2 supports variations'),
+  url('./Inter-Variable.woff2') format('woff2-variations');
   font-weight: 400 785;
-  font-variation-settings: 
-    "slnt" 0,
-    "ital" 0;
+  font-display: swap;
 }
